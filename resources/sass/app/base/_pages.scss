@@ -1,0 +1,71 @@
+.page-section {
+  padding: 100px 0;
+
+  @media (min-width: map_get($grid-breakpoints, sm)) {
+    padding: 130px 50px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, lg)) {
+    padding: 130px 80px;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, xl)) {
+    padding: 130px;
+  }
+
+  .logo {
+    display: none;
+    justify-content: flex-end;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      display: flex;
+    }
+
+    svg {
+      width: auto;
+    }
+  }
+
+  .back-navigation {
+    margin-top: 10px;
+  }
+
+  &-portfolio {
+
+
+    .logo {
+      justify-content: flex-start;
+    }
+  }
+
+  .decor {
+    width: 100%;
+    border-bottom: 3px solid rgba(255, 255, 255, .25);
+    margin-bottom: 40px;
+    margin-top: 20px;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .title-review {
+    width: 300px;
+
+    h4 {
+      color: $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .rating {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .description-review {
+    color: #fff;
+  }
+}

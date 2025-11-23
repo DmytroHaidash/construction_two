@@ -1,0 +1,170 @@
+#review {
+  background: #0000;
+  //padding: 340px 0;
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .description-section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    p {
+      position: relative;
+      font-size: 1.125rem;
+      padding: 10px 15px;
+      margin-bottom: 25px;
+
+      @media (min-width: map_get($grid-breakpoints, sm)) {
+        margin-bottom: 0;
+        padding: 10px 30px;
+        max-width: 80%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 4px;
+        background: $primary;
+      }
+    }
+
+    &.start-animation {
+
+      p {
+
+        &::before {
+          animation: toggleWidth 1.5s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+#reviews {
+  width: 100%;
+}
+
+
+.review-slider {
+  position: relative;
+  z-index: 10;
+
+ /* .flickity-viewport {
+    overflow: visible;
+  }
+*/
+  &--end {
+
+    .review-item {
+      align-items: flex-end;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        padding-left: 40px;
+      }
+    }
+
+    &::before {
+      right: 12%;
+    }
+  }
+
+  &--start {
+
+    .review-item {
+      align-items: flex-start;
+
+      @media (min-width: map_get($grid-breakpoints, xl)) {
+        padding-right: 40px;
+      }
+
+    }
+
+    &::before {
+      left: 5%;
+    }
+  }
+
+  .review-item {
+    position: relative;
+    flex-direction: column;
+    width: 50%;
+    min-height: 340px;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (max-width: map_get($grid-breakpoints, md)) {
+      width: 99%;
+    }
+
+    .review-card {
+      min-height: 330px;
+      background: $secondary;
+      border: 5px solid $primary;
+
+      .decor {
+        margin-left: 20%;
+        width: 60%;
+        border-bottom: 1px solid $primary;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+        &:last-child {
+          border: none;
+        }
+      }
+
+      .title {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        margin-bottom: 10px;
+      }
+      .rating {
+        display: flex;
+        justify-content: center;
+
+      }
+
+      .description {
+        padding: 20px;
+        padding-bottom: 0px;
+        font-family: 'FuturaLightCTT';
+      }
+
+      .link {
+        padding-left: 20px;
+      }
+
+      &:hover {
+        color: #fff;
+        box-shadow: 0 0 15px 1px rgba($primary, .45);
+
+        /*.title {
+          color: $primary;
+        }*/
+      }
+    }
+  }
+
+  /*&::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    bottom: -30px;
+
+    width: 100%;
+    z-index: -4;
+  }*/
+}
+
