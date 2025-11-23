@@ -10,14 +10,14 @@ class TrustProxies extends Middleware
     /**
      * The trusted proxies for this application.
      *
-     * @var array|string
+     * @var array|string|null
      */
-    protected $proxies;
+    protected $proxies = '*'; // или ['IP_Прокси']
 
     /**
      * The headers that should be used to detect proxies.
      *
      * @var int
      */
-    protected $headers = Request::HEADER_X_FORWARDED_ALL;
+    protected $headers = Request::HEADER_X_FORWARDED_FOR | Request::HEADER_X_FORWARDED_HOST | Request::HEADER_X_FORWARDED_PORT | Request::HEADER_X_FORWARDED_PROTO;
 }

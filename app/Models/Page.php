@@ -6,13 +6,13 @@ use App\Traits\SluggableTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Spatie\Image\Manipulations;
-use Spatie\MediaLibrary\HasMedia\HasMedia;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use Spatie\MediaLibrary\Models\Media;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Page extends Model implements HasMedia
 {
-    use SluggableTrait, HasMediaTrait;
+    use SluggableTrait, InteractsWithMedia;
 
     protected $fillable = [
         'slug'
@@ -44,7 +44,7 @@ class Page extends Model implements HasMedia
         return asset($media);
     }
 
-    public function registerMediaCollections()
+    public function registerMediaCollections(): void
     {
         $this
             ->addMediaCollection('page')

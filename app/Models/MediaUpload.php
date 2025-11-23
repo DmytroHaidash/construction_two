@@ -4,18 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Image\Manipulations;
-use Spatie\MediaLibrary\HasMedia\HasMedia;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use Spatie\MediaLibrary\Models\Media;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 
 class MediaUpload extends Model implements HasMedia
 {
-    use HasMediaTrait;
+    use InteractsWithMedia;
 
 	/**
 	 * Media config
 	 */
-	public function registerMediaCollections()
+	public function registerMediaCollections(): void
 	{
 		$this
 			->addMediaCollection('uploads')
