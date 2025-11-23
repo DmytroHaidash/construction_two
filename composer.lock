@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e591e30e09de99eb9237423646a6474",
+    "content-hash": "a37736cbfadfd945607eb871d9077c5c",
     "packages": [
         {
             "name": "brick/math",
@@ -5864,6 +5864,56 @@
                 }
             ],
             "time": "2025-09-25T15:37:27+00:00"
+        },
+        {
+            "name": "talanoff/impression-admin",
+            "version": "v1.0.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Talanoff/impression-admin.git",
+                "reference": "b20eec467a8b0e6ddfa449866134581a6bd6e1dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Talanoff/impression-admin/zipball/b20eec467a8b0e6ddfa449866134581a6bd6e1dc",
+                "reference": "b20eec467a8b0e6ddfa449866134581a6bd6e1dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Talanoff\\ImpressionAdmin\\ImpressionAdminServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "master-dev": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Talanoff\\ImpressionAdmin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleh Talanoff",
+                    "email": "talanov.o@gmail.com"
+                }
+            ],
+            "description": "Clean & beauty admin panel",
+            "support": {
+                "issues": "https://github.com/Talanoff/impression-admin/issues",
+                "source": "https://github.com/Talanoff/impression-admin/tree/v1.0.15"
+            },
+            "time": "2019-11-22T13:01:14+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

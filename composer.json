@@ -15,7 +15,8 @@
         "laravel/framework": "^9.0",
         "laravel/tinker": "^2.8",
         "laravel/ui": "^3.4",
-        "spatie/laravel-medialibrary": "^9.0"
+        "spatie/laravel-medialibrary": "^9.0",
+        "talanoff/impression-admin": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
